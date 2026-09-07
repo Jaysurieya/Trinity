@@ -1,6 +1,6 @@
 import React from "react";
-import { recentAlerts } from "../data";
-import { DangerIcon, WarningIcon, InfoIcon, SuccessIcon } from "./Icons";
+import { recentAlerts } from "../../data";
+import { DangerIcon, WarningIcon, InfoIcon, SuccessIcon } from "../Icons";
 
 const ICON_MAP = {
   danger: DangerIcon,

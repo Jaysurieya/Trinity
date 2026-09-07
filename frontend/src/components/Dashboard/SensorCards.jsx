@@ -1,6 +1,6 @@
 import React from "react";
-import { sensorReadings } from "../data";
-import { FlameIcon, CloudIcon, SkullIcon, ThermometerIcon, DropletIcon, O2Badge } from "./Icons";
+import { sensorReadings } from "../../data";
+import { FlameIcon, CloudIcon, SkullIcon, ThermometerIcon, DropletIcon, O2Badge } from "../Icons";
 
 const ICON_MAP = {
   flame: FlameIcon,

@@ -1,6 +1,6 @@
 // Lightweight inline SVG icon set — no external icon library required.
 // Every icon takes `size` and `color` props so callers can theme them inline.
-import { Settings,Flame,Cloud,Skull,Droplets} from 'lucide-react';
+import { Settings,Flame,Cloud,Skull,Droplets,Car} from 'lucide-react';
 
 export const Icon = ({ children, size = 20, viewBox = "0 0 24 24" }) => (
   <svg
@@ -69,14 +69,19 @@ export const PinIcon = ({ size, color = "currentColor" }) => (
   </Icon>
 );
 
-export const TruckIcon = ({ size, color = "currentColor" }) => (
-  <Icon size={size}>
-    <rect x="2.5" y="8" width="11" height="8" rx="1.2" stroke={color} strokeWidth="1.8" />
-    <path d="M13.5 11h3.5l3 3v2h-6.5v-5Z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
-    <circle cx="7" cy="17.5" r="1.6" stroke={color} strokeWidth="1.6" />
-    <circle cx="16.5" cy="17.5" r="1.6" stroke={color} strokeWidth="1.6" />
-  </Icon>
+// export const TruckIcon = ({ size, color = "currentColor" }) => (
+//   <Icon size={size}>
+//     <rect x="2.5" y="8" width="11" height="8" rx="1.2" stroke={color} strokeWidth="1.8" />
+//     <path d="M13.5 11h3.5l3 3v2h-6.5v-5Z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
+//     <circle cx="7" cy="17.5" r="1.6" stroke={color} strokeWidth="1.6" />
+//     <circle cx="16.5" cy="17.5" r="1.6" stroke={color} strokeWidth="1.6" />
+//   </Icon>
+// );
+
+export const TruckIcon = ({ size = 20, color = 'currentColor', ...props }) => (
+  <Car size={size} color={color} {...props} />
 );
+
 
 export const AlertIcon = ({ size, color = "currentColor" }) => (
   <Icon size={size}>
@@ -321,5 +326,195 @@ export const ExpandIcon = ({ size = 18, color = "currentColor" }) => (
 export const PlayIcon = ({ size = 16, color = "#fff" }) => (
   <Icon size={size}>
     <path d="M6 4.5v15l13-7.5-13-7.5Z" fill={color} />
+  </Icon>
+);
+
+
+// =========================================================
+// Rover Control page icons
+// =========================================================
+
+
+export const CameraIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <rect x="3" y="7" width="18" height="12" rx="2" stroke={color} strokeWidth="1.8" />
+    <circle cx="12" cy="13" r="3.2" stroke={color} strokeWidth="1.8" />
+    <path d="M8.5 7 10 4.5h4L15.5 7" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
+  </Icon>
+);
+
+export const ThermalIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <rect x="3.5" y="3.5" width="17" height="17" rx="2" stroke={color} strokeWidth="1.6" strokeDasharray="3 2" />
+    <circle cx="12" cy="12" r="3" stroke={color} strokeWidth="1.6" />
+  </Icon>
+);
+
+export const BulbIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <circle cx="12" cy="10" r="5.5" stroke={color} strokeWidth="1.8" />
+    <path d="M10 18h4M10.5 20h3" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+  </Icon>
+);
+
+export const WrenchIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path
+      d="M14.5 6.5a4 4 0 0 0-5.5 4.6L4 16.2l2.3 2.3 5.1-5a4 4 0 0 0 4.6-5.5l-2.3 2.3-2-2 2.3-2.3Z"
+      stroke={color}
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
+  </Icon>
+);
+
+export const LoraDispenserIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <circle cx="12" cy="14" r="1.6" fill={color} />
+    <path d="M8.5 11a5 5 0 0 1 7 0M6 8.5a8.5 8.5 0 0 1 12 0" stroke={color} strokeWidth="1.6" strokeLinecap="round" />
+  </Icon>
+);
+
+export const SpeakerIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path d="M4 10v4h3l5 4V6l-5 4H4Z" stroke={color} strokeWidth="1.6" strokeLinejoin="round" />
+    <path d="M16 9.5a4 4 0 0 1 0 5M18.5 7a7.5 7.5 0 0 1 0 10" stroke={color} strokeWidth="1.6" strokeLinecap="round" />
+  </Icon>
+);
+
+export const PulseIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path
+      d="M3 12h4l2-6 4 12 2-8 2 2h4"
+      stroke={color}
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Icon>
+);
+
+export const ArrowUpIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path d="M12 5v14M12 5l-5 5M12 5l5 5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </Icon>
+);
+
+export const ArrowDownIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path d="M12 19V5M12 19l-5-5M12 19l5-5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </Icon>
+);
+
+export const ArrowLeftIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path d="M19 12H5M19 12l-5-5M19 12l-5 5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </Icon>
+);
+
+export const ArrowRightIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path d="M5 12h14M5 12l5-5M5 12l5 5" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </Icon>
+);
+
+export const StopSquareIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <rect x="6" y="6" width="12" height="12" rx="1.5" fill={color} />
+  </Icon>
+);
+
+export const RefreshIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path
+      d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"
+      stroke={color}
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
+    <path d="M18 4v4h-4M6 20v-4h4" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+  </Icon>
+);
+
+
+/* =========================================================
+   Sensor Data page — icon stubs
+   Placeholder shapes only — swap each for your own icon
+   component. The comment above each one describes what it
+   should visually depict.
+   ========================================================= */
+
+// A magnifying glass. Used in: the sensor search input.
+export const SearchIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <circle cx="10.5" cy="10.5" r="6" stroke={color} strokeWidth="1.8" />
+    <path d="M15 15l5 5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+  </Icon>
+);
+
+// A small downward chevron. Used in: the "All Sensors" filter dropdown.
+export const ChevronDownIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path d="M6 9l6 6 6-6" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+  </Icon>
+);
+
+// Concentric broadcast/antenna waves. Used in: "Sensors Online" top-stat card.
+export const RadioIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <circle cx="12" cy="12" r="2" fill={color} />
+    <path d="M8.5 15.5a5 5 0 0 1 0-7M15.5 8.5a5 5 0 0 1 0 7" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+    <path d="M5.5 18.5a9 9 0 0 1 0-13M18.5 5.5a9 9 0 0 1 0 13" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+  </Icon>
+);
+
+// A database/stacked-disc icon. Used in: "Live Real-Time Data" top-stat card.
+export const DatabaseIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <ellipse cx="12" cy="6" rx="7" ry="2.5" stroke={color} strokeWidth="1.8" />
+    <path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6" stroke={color} strokeWidth="1.8" />
+    <path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" stroke={color} strokeWidth="1.8" />
+  </Icon>
+);
+
+// A microphone body. Used in: Sound / Acoustic sensor card.
+export const MicIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <rect x="9" y="3" width="6" height="11" rx="3" stroke={color} strokeWidth="1.8" />
+    <path d="M6 11a6 6 0 0 0 12 0" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+    <path d="M12 17v3.5M9 20.5h6" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+  </Icon>
+);
+
+// A 3D cube/wireframe box. Used in: IMU (Motion) sensor card.
+export const CubeIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path
+      d="M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5Z"
+      stroke={color}
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
+    <path d="M4 8l8 4.5L20 8M12 12.5V21" stroke={color} strokeWidth="1.6" strokeLinejoin="round" />
+  </Icon>
+);
+
+// A 2x2 grid of squares. Used in: "Total Sensors" row, Sensor System Info panel.
+export const GridIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <rect x="3.5" y="3.5" width="7" height="7" rx="1.2" stroke={color} strokeWidth="1.6" />
+    <rect x="13.5" y="3.5" width="7" height="7" rx="1.2" stroke={color} strokeWidth="1.6" />
+    <rect x="3.5" y="13.5" width="7" height="7" rx="1.2" stroke={color} strokeWidth="1.6" />
+    <rect x="13.5" y="13.5" width="7" height="7" rx="1.2" stroke={color} strokeWidth="1.6" />
+  </Icon>
+);
+
+// A wifi glyph with a strike-through slash. Used in: "Disconnected" row, Sensor System Info panel.
+export const WifiOffIcon = ({ size, color = "currentColor" }) => (
+  <Icon size={size}>
+    <path d="M4 9a12 12 0 0 1 16 0" stroke={color} strokeWidth="1.6" strokeLinecap="round" opacity="0.4" />
+    <path d="M7 12.5a7.5 7.5 0 0 1 10 0" stroke={color} strokeWidth="1.6" strokeLinecap="round" opacity="0.4" />
+    <circle cx="12" cy="19" r="1" fill={color} />
+    <path d="M3 3l18 18" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
   </Icon>
 );

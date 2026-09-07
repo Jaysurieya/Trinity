@@ -1,6 +1,6 @@
 import React from "react";
-import { roverStatus } from "../data";
-import { BatteryIcon, CpuIcon, GaugeIcon, WifiIcon, ClockIcon } from "./Icons";
+import { roverStatus } from "../../data";
+import { BatteryIcon, CpuIcon, GaugeIcon, WifiIcon, ClockIcon } from "../Icons";
 
 const ICON_MAP = {
   battery: BatteryIcon,

@@ -1,6 +1,6 @@
 import React from "react";
-import { aiAnalysis } from "../data";
-import { SuccessIcon, BarChartIcon, PersonIcon, TargetIcon, PlayIcon } from "./Icons";
+import { aiAnalysis } from "../../data";
+import { SuccessIcon, BarChartIcon, PersonIcon, TargetIcon, PlayIcon } from "../Icons";
 
 const ICON_MAP = {
   success: SuccessIcon,

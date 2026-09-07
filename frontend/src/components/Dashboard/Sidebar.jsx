@@ -1,5 +1,5 @@
 import React from "react";
-import { navItems } from "../data";
+import { navItems } from "../../data";
 import {
   LogoMark,
   HomeIcon,
@@ -10,7 +10,7 @@ import {
   TruckIcon,
   AlertIcon,
   SettingsIcon,
-} from "./Icons";
+} from "../Icons";
 
 const ICON_MAP = {
   home: HomeIcon,

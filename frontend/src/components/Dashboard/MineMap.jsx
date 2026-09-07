@@ -1,6 +1,6 @@
 import React from "react";
-import { mapLegend } from "../data";
-import { RoverMarkerIcon, HazardMarkerIcon, DockMarkerIcon, RelayMarkerIcon, PinIcon } from "./Icons";
+import { mapLegend } from "../../data";
+import { RoverMarkerIcon, HazardMarkerIcon, DockMarkerIcon, RelayMarkerIcon, PinIcon } from "../Icons";
 
 const LEGEND_ICON = {
   rover: RoverMarkerIcon,
