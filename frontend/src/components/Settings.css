@@ -1,0 +1,189 @@
+/* =========================================================
+   Settings page — scoped styles (st- prefix)
+   ========================================================= */
+
+.st-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* --- Settings Sidebar --- */
+.st-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.st-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.st-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+}
+
+.st-tab-btn.active {
+    background: var(--bg-panel-alt);
+    color: var(--text-primary);
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.st-tab-btn.active svg {
+    color: var(--accent-blue);
+}
+
+/* --- Settings Content Panel --- */
+.st-content {
+    flex: 1;
+    min-width: 0;
+    min-height: 500px;
+}
+
+.st-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.st-header {
+    margin-bottom: 8px;
+}
+
+.st-header h2 {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin: 0 0 6px;
+}
+
+.st-header p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.st-divider {
+    height: 1px;
+    background: var(--border-soft);
+    margin: 8px 0;
+}
+
+/* --- Form Elements --- */
+.st-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 480px;
+}
+
+.st-form-group.row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+.st-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.st-subtext {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.st-input,
+.st-select {
+    background: var(--bg-panel-alt);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    padding: 10px 12px;
+    font-size: 13.5px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.st-input:focus,
+.st-select:focus {
+    border-color: var(--accent-blue);
+}
+
+.st-select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* --- Action Buttons --- */
+.st-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.st-btn {
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: 13.5px;
+    font-weight: 600;
+    border: none;
+}
+
+.st-btn.primary {
+    background: var(--accent-blue-strong);
+    color: #fff;
+}
+
+.st-btn.primary:hover {
+    background: #1d4ed8;
+}
+
+.st-btn.secondary {
+    background: transparent;
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
+}
+
+.st-btn.secondary:hover {
+    background: var(--bg-panel-alt);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .st-layout {
+        flex-direction: column;
+    }
+
+    .st-sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .st-tab-btn {
+        flex: 1;
+        min-width: 140px;
+        justify-content: center;
+    }
+}

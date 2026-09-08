@@ -1,0 +1,273 @@
+/* =========================================================
+   Alerts & Logs page — scoped styles (al- prefix)
+   ========================================================= */
+
+.al-top-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.al-stat-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+}
+
+.al-stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.al-stat-icon.critical {
+    background: rgba(239, 68, 68, 0.12);
+    color: var(--red);
+}
+
+.al-stat-icon.warning {
+    background: rgba(234, 179, 8, 0.12);
+    color: var(--amber);
+}
+
+.al-stat-icon.info {
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--accent-blue);
+}
+
+.al-stat-icon.total {
+    background: rgba(147, 160, 184, 0.12);
+    color: var(--text-secondary);
+}
+
+.al-stat-body {
+    min-width: 0;
+}
+
+.al-stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.al-stat-label {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+/* --- Main Panel --- */
+.al-panel {
+    flex: 1;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.al-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.al-tabs {
+    display: flex;
+    gap: 6px;
+    background: var(--bg-panel-alt);
+    padding: 4px;
+    border-radius: var(--radius-md);
+}
+
+.al-tab-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s;
+}
+
+.al-tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.al-tab-btn.active {
+    background: var(--border-soft);
+    color: var(--text-primary);
+}
+
+.al-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.al-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-panel-alt);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    min-width: 240px;
+}
+
+.al-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 13px;
+    width: 100%;
+}
+
+.al-search input::placeholder {
+    color: var(--text-muted);
+}
+
+.al-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--border-soft);
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+}
+
+.al-action-btn:hover {
+    background: var(--bg-panel-alt);
+    border-color: var(--border-subtle);
+}
+
+/* --- Table --- */
+.al-table-container {
+    overflow-x: auto;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+}
+
+.al-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+.al-table th {
+    background: var(--bg-panel-alt);
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-soft);
+    white-space: nowrap;
+}
+
+.al-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--text-primary);
+    vertical-align: top;
+}
+
+.al-table tr:last-child td {
+    border-bottom: none;
+}
+
+.al-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.al-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.al-badge.critical {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--red);
+}
+
+.al-badge.warning {
+    background: rgba(234, 179, 8, 0.15);
+    color: var(--amber);
+}
+
+.al-badge.info {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-blue);
+}
+
+.al-message-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.al-message-desc {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.al-time-col {
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.al-empty {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .al-top-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .al-top-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .al-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .al-controls {
+        flex-wrap: wrap;
+    }
+
+    .al-search {
+        flex: 1;
+        min-width: 100%;
+    }
+}

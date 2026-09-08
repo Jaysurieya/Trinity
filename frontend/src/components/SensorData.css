@@ -1,0 +1,462 @@
+/* =========================================================
+   Sensor Data page — scoped styles (sd- prefix)
+   Imported only by src/components/SensorData.jsx
+   ========================================================= */
+
+/* --- Top stats row (4 widgets only) --- */
+.sd-top-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.sd-stat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #131a2b;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.sd-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sd-stat-icon--live {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.sd-stat-body {
+  min-width: 0;
+}
+
+.sd-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e7ecf5;
+  line-height: 1.2;
+}
+
+.sd-stat-value--live {
+  color: #22c55e;
+}
+
+.sd-stat-suffix,
+.sd-stat-unit {
+  font-size: 13px;
+  font-weight: 500;
+  color: #93a0b8;
+}
+
+.sd-stat-label {
+  font-size: 12.5px;
+  color: #93a0b8;
+  margin-top: 2px;
+}
+
+.sd-stat-progress-track {
+  margin-top: 8px;
+  height: 4px;
+  border-radius: 999px;
+  background: #1f2937;
+  overflow: hidden;
+}
+
+.sd-stat-progress-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 999px;
+}
+
+/* --- Readings panel wrapper + toolbar --- */
+.sd-readings-panel {
+  padding: 18px;
+}
+
+.sd-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.sd-toolbar-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e7ecf5;
+  margin: 0 0 3px;
+}
+
+.sd-toolbar-subtitle {
+  font-size: 12.5px;
+  color: #93a0b8;
+  margin: 0;
+}
+
+.sd-toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sd-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0f1522;
+  border: 1px solid #232d40;
+  border-radius: 8px;
+  padding: 9px 12px;
+  min-width: 220px;
+}
+
+.sd-search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e7ecf5;
+  font-size: 13px;
+  width: 100%;
+}
+
+.sd-search-box input::placeholder {
+  color: #6b7690;
+}
+
+.sd-select-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sd-select-box select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #0f1522;
+  border: 1px solid #232d40;
+  border-radius: 8px;
+  color: #e7ecf5;
+  font-size: 13px;
+  padding: 9px 32px 9px 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.sd-select-box svg {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+}
+
+.sd-refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 9px 16px;
+}
+
+.sd-refresh-btn:hover {
+  background: #1d4ed8;
+}
+
+.sd-spin {
+  display: inline-flex;
+  animation: sd-spin-anim 0.8s linear infinite;
+}
+
+@keyframes sd-spin-anim {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Sensor reading cards grid --- */
+.sd-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.sd-card {
+  position: relative;
+  background: #0f1522;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 14px 14px 30px;
+  overflow: hidden;
+}
+
+.sd-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.sd-card-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #e7ecf5;
+  line-height: 1.3;
+}
+
+.sd-card-unit-hint {
+  font-size: 11px;
+  color: #6b7690;
+}
+
+.sd-card-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e7ecf5;
+  margin-bottom: 6px;
+}
+
+.sd-card-status {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.12);
+  border-radius: 999px;
+  padding: 2px 9px;
+  margin-bottom: 8px;
+}
+
+.sd-card-sub {
+  font-size: 11px;
+  color: #6b7690;
+  margin-bottom: 10px;
+}
+
+.sd-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 10.5px;
+  color: #6b7690;
+}
+
+.sd-connected-text {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.sd-disconnected-text {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* The "light like" bottom connection indicator strip */
+.sd-connection-glow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+}
+
+.sd-connection-glow.is-connected {
+  background: #22c55e;
+  box-shadow: 0 0 12px 1px rgba(34, 197, 94, 0.65);
+}
+
+.sd-connection-glow.is-disconnected {
+  background: #ef4444;
+  box-shadow: 0 0 12px 1px rgba(239, 68, 68, 0.65);
+}
+
+.sd-empty-state {
+  text-align: center;
+  padding: 40px 0;
+  color: #6b7690;
+  font-size: 13px;
+}
+
+/* --- Bottom row: health overview | events | system info --- */
+.sd-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Sensor Health Overview */
+.sd-health-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sd-donut-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.sd-donut {
+  width: 100%;
+  height: 100%;
+}
+
+.sd-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sd-donut-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e7ecf5;
+}
+
+.sd-donut-sub {
+  font-size: 11px;
+  color: #93a0b8;
+}
+
+.sd-health-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.sd-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sd-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sd-legend-label {
+  flex: 1;
+  font-size: 13px;
+  color: #93a0b8;
+}
+
+.sd-legend-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e7ecf5;
+}
+
+/* Recent Sensor Events table */
+.sd-events-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.sd-events-table th {
+  text-align: left;
+  color: #6b7690;
+  font-weight: 600;
+  padding: 0 8px 10px 0;
+  border-bottom: 1px solid #1f2937;
+}
+
+.sd-events-table td {
+  padding: 10px 8px 10px 0;
+  color: #e7ecf5;
+  border-bottom: 1px solid #161d2c;
+}
+
+.sd-status-chip {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.12);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+
+/* Sensor System Info */
+.sd-system-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sd-system-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sd-system-info-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #93a0b8;
+}
+
+.sd-system-info-value {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #e7ecf5;
+  text-align: right;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1280px) {
+  .sd-top-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sd-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sd-bottom-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .sd-top-stats {
+    grid-template-columns: 1fr;
+  }
+  .sd-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sd-toolbar-controls {
+    width: 100%;
+  }
+  .sd-search-box {
+    flex: 1;
+    min-width: 0;
+  }
+}
